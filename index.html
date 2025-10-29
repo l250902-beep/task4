@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manal's Baking Journal</title>
+    
+    <!-- We need the Tailwind script since your HTML uses classes like sm:flex and sm:gap-6 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        /* General page styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fce7f3; /* Very pale pink background */
+        }
+        
+        /* Main container for the journal */
+        .journal-container {
+            width: 900px;
+            margin: 30px auto; 
+            padding: 20px; 
+            background-color: white;
+            border-radius: 10px; /* Slightly rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
+        }
+
+        /* Styles for the sidebar title */
+        .sidebar-header {
+            background-color: #f472b6; /* Medium Pink */
+            color: white;
+            padding: 8px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            text-align: center;
+            font-weight: bold; /* Added bold */
+        }
+
+        /* Styles for the sidebar content */
+        .sidebar-content {
+            background-color: #fbcfe8; /* Lighter Pink */
+            padding: 10px;
+            border-bottom-left-radius: 8px;
+            color: #9d174d; /* Darker Pink text */
+            border-bottom-right-radius: 8px; /* Added right radius */
+        }
+        
+        /* Styles for the main journal entry blocks */
+        .pattern-entry {
+            /* Border removed as requested */
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            /* Added a subtle shadow to separate entries since the border is gone */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); 
+        }
+
+        /* Styles for the titles inside the entries */
+        .entry-title {
+            color: #be185d; /* Dark Rose color */
+            /* Dotted line removed as requested */
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* Make the lists inside the entries look cleaner */
+        .entry-list {
+            padding-left: 20px;
+        }
+        .entry-list li {
+            margin-bottom: 5px;
+        }
+        
+    </style>
+</head>
+<body class="journal-bg font-sans p-4">
+
+    <article class="journal-container">
+        <!-- HEADER SECTION -->
+        <header class="flex justify-between items-start p-4 mb-6 border-b border-gray-200" style="background-color: #ffadcd;">
+            <h1 class="text-3xl font-bold text-gray-800">Manal's Baking Journal</h1> <br>
+            <p>Strawberry Muffins</p>
+        </header>
+
+        <!-- MAIN CONTENT LAYOUT (Sidebar and Entries) -->
+        <div class="sm:flex sm:gap-6">
+            
+            <!-- LEFT SIDEBAR -->
+            <section class="sm:w-1/4 mb-6 sm:mb-0">
+                <h2 class="sidebar-header font-semibold text-lg">Moodboard</h2>
+                <div class="sidebar-content">
+                    <!-- Simple unstyled list (ul) for links -->
+                    <ul class="list-none p-0 m-0 text-sm">
+                        <li>Feeling good</li>
+                        <li>Meh</li>
+                        <li>Much Cry</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- RIGHT JOURNAL ENTRIES -->
+            <section class="sm:w-3/4">
+
+                <!-- JOURNAL ENTRY 1: Ingredients -->
+                <article class="pattern-entry">
+                    <h2 class="text-xl font-semibold mb-2 entry-title">Ingredients</h2>
+                    
+                    <div class="entry-layout items-center">
+                        <ul class="entry-list" type="circle">
+                            <li>2 Cups all purpose flour</li>
+                            <li>2 teaspoons baking powder</li>
+                            <li>3/4 teaspoon salt</li>
+                            <li>1 Stick unsalted butter</li>
+                            <li>1 Cup Sugar</li>
+                            <li>2 Large Eggs</li>
+                            <li>1.5 teaspoon vanilla extract</li>
+                            <li>2.25 cup diced strawberries</li>
+                        </ul>
+
+                        <img src = "strawberry.jpg" alt = "Strawberries" width = "400" height = "200">
+                    </div>
+                </article>
+
+                <!-- JOURNAL ENTRY 2: Instructions -->
+                <article class="pattern-entry">
+                    <h2 class="text-xl font-semibold mb-2 entry-title">Instructions</h2>
+                    
+                    <div class="entry-layout items-center">
+                        <!-- Note: Text comes first in the image, but I'll float the image to the right -->
+                        <ol class="entry-list" type="1"> 
+                            <li>Preheat oven to 375°F (Fahrenheit).</li>
+                            <li>In a bowl, whisk together the flour, baking powder, and salt.</li>
+                            <li>In an electric mixer, beat the butter and sugar for 2 mins. Then add the eggs one at a time, scraping whisk while doing so.</li>
+                            <li>With the mixer on low, add the flour mixture in three additions after adding the milk.</li>
+                            <li>Toss the strawberries with 2 teaspoons of flour.</li>
+                        </ol>
+                        <!-- Placeholder Image for Strawberry Muffins (Replaced local file for compatibility) -->
+                        <img src ="Strawberry-Muffins-1.jpg" alt = "Stawberry Muffins" width = "200" height = "350">
+</div>
+                </article>
+
+            </section>
+        </div>
+    </article>
+
+</body>
+</html>
